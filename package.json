@@ -1,0 +1,25 @@
+{
+  "name": "gitbook-plugin-html5-video",
+  "version": "1.0.0",
+  "description": "This is to support html5 video in gitbook",
+  "main": "index.js",
+  "engines": {
+    "gitbook": ">1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Harris2012/gitbook-plugin-html5-video"
+  },
+  "keywords": [
+    "video",
+    "gitbook",
+    "html5",
+    "vimeo"
+  ],
+  "author": "Harris Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Harris2012/gitbook-plugin-html5-video/issues"
+  },
+  "homepage": "https://github.com/Harris2012/gitbook-plugin-html5-video"
+}
