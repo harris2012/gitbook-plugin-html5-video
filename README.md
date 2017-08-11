@@ -22,7 +22,7 @@ Add it to your `book.json`, then run `gitbook install`:
 
 2. {% video width="740", height="350" %}https://www.domain.com/video.mp4{% endvideo %}
 
-3. {% video width="740", height="350", loop="loop", controls="controls" %}https://www.domain.com/video.mp4{% endvideo %}
+3. {% video width="740", height="350", loop="loop", controls="controls", autplay="controls" %}https://www.domain.com/video.mp4{% endvideo %}
 ...
 
 ```
@@ -33,5 +33,5 @@ Add it to your `book.json`, then run `gitbook install`:
 
 <video src="https://www.domain.com/video.mp4" width="740" height="350"></video>
 
-<video src="https://www.domain.com/video.mp4" width="740" height="350" controls="controls" loop="loop"></video>
+<video src="https://www.domain.com/video.mp4" width="740" height="350" controls loop autoplay></video>
 ```

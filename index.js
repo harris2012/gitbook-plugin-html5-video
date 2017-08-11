@@ -4,14 +4,15 @@ function getHtml5Video(block){
 
     var width = block.kwargs.width || '100%';
     var height = block.kwargs.height || '100%';
-    var loop = block.kwargs.loop || '';
-    var controls = block.kwargs.controls || '';
+    var loop = block.kwargs.loop ? 'loop' : '';
+    var controls = block.kwargs.controls ? 'controls' : '';
+    var autoplay = block.kwargs.autoplay ? 'autoplay' : '';
 
-    return '<video src="'+url+'" width="'+width+'" height="'+height+'" controls="'+controls+'" loop="'+loop+'"></video>';
+    return '<video src="'+url+'" width="'+width+'" height="'+height+'" '+controls+' '+loop+' '+autoplay+'></video>';
 }
 
 /*
-{%video%, width = "100%", height = "74", loop = "loop", controls = "controls"} http://**.mp4 {%video%}
+{%video%, width = "100%", height = "74", loop = "loop", controls = "controls", autoplay = "autoplay"} http://**.mp4 {%video%}
 */
 module.exports = {
     blocks: {
