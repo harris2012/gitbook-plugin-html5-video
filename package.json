@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-html5-video",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is to support html5 video in gitbook",
   "main": "index.js",
   "engines": {
