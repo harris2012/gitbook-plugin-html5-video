@@ -1,23 +1,34 @@
-function getHtml5Video(block){
+function getHtml5Video(block) {
 
     var url = block.body;
 
     var width = block.kwargs.width || '100%';
     var height = block.kwargs.height || '100%';
-    var loop = block.kwargs.loop ? 'loop' : '';
-    var controls = block.kwargs.controls ? 'controls' : '';
-    var autoplay = block.kwargs.autoplay ? 'autoplay' : '';
 
-    return '<video src="'+url+'" width="'+width+'" height="'+height+'" '+controls+' '+loop+' '+autoplay+'></video>';
+    var items = [];
+    items.push("src='" + url + "'");
+    items.push("width='" + width + "'");
+    items.push("height='" + height + "'");
+    if (block.kwargs.poster) {
+        items.push("poster='" + block.kwargs.poster + "'")
+    }
+    if (block.kwargs.autoplay) {
+        items.push('autoplay')
+    }
+    if (block.kwargs.controls) {
+        items.push('controls')
+    }
+    if (block.kwargs.loop) {
+        items.push('loop')
+    }
+
+    return '<video ' + items.filter(v => !!v).join(' ') + '></video>';
 }
 
-/*
-{%video%, width = "100%", height = "74", loop = "loop", controls = "controls", autoplay = "autoplay"} http://**.mp4 {%video%}
-*/
 module.exports = {
     blocks: {
         video: {
-            process: function(block) {
+            process: function (block) {
                 return getHtml5Video(block);
             }
         }
